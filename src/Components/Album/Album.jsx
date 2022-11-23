@@ -1,15 +1,12 @@
 import "./styles.css";
 
-const Album = () => {
+const Album = (props) => {
+  console.log(props, "props");
   return (
-    <div className="container">
-      <img
-        src="https://i.scdn.co/image/ab67616d0000b2730f365e81ca21fd7a779dc58a"
-        width="200px"
-        alt=""
-      />
-      <h3>B Praak</h3>
-      <p>Filhaal 2</p>
+    <div className="card">
+      <img src={props.item.album_cover} width="200px" alt="" />
+      <h3>{props.item.artist}</h3>
+      <p>{props.item.album_title}</p>
     </div>
   );
 };
